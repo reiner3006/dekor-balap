@@ -49,7 +49,7 @@ body {
   background-color: #161616;
   background-image:
     linear-gradient(rgba(17, 17, 17, 0.28), rgba(17, 17, 17, 0.42)),
-    url('/src/assets/images/dekor_balap_stage_only_1795163819592.jpg');
+    url('./src/assets/images/dekor_balap_stage_only_1795163819592.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
