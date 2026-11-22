@@ -14,7 +14,7 @@ import {
 
 const validSampleData = {
   nama: 'Budi Santoso',
-  whatsapp: '081234567890',
+  whatsapp: '081234543456',
   provinsi: 'Nusa Tenggara Timur',
   kabupaten: 'Kabupaten Sikka',
   kecamatan: 'Alok',
