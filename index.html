@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DEKOR BALAP — Formulir Pemesanan Jasa Dekorasi</title>
+    <meta
+      name="description"
+      content="Formulir pemesanan jasa dekorasi DEKOR BALAP. Pilih jenis dekorasi, paket, jadwal, dan lokasi pemasangan lalu kirim pesanan langsung ke WhatsApp Admin."
+    />
+    <meta property="og:title" content="DEKOR BALAP — Formulir Pemesanan Jasa Dekorasi" />
+    <meta
+      property="og:description"
+      content="Formulir pemesanan jasa dekorasi DEKOR BALAP. Pilih jenis dekorasi, paket, jadwal, dan lokasi pemasangan lalu kirim pesanan langsung ke WhatsApp Admin."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;1,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="#lokasi-pemesanan" class="brand-link" aria-label="DEKOR BALAP Formulir Pemesanan">
+          <span class="brand-logo-frame">
+            <img
+              src="/public/logo-strip-dekor.png"
+              alt="Logo DEKOR BALAP"
+              class="brand-logo-img"
+              referrerpolicy="no-referrer"
+            />
+          </span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Bagian Formulir">
+          <a href="#lokasi-pemesanan">Lokasi Pemesanan</a>
+          <a href="#detail-pemesanan">Detail Pemesanan</a>
+          <a href="#ringkasan-pilihan">Ringkasan</a>
+        </nav>
+
+        <button
+          type="button"
+          id="hamburgerBtn"
+          class="hamburger-btn"
+          aria-label="Buka menu navigasi formulir"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+            <line x1="4" y1="6" x2="20" y2="6" />
+            <line x1="4" y1="12" x2="20" y2="12" />
+            <line x1="4" y1="18" x2="20" y2="18" />
+          </svg>
+        </button>
+      </div>
+
+      <nav id="mobileMenu" class="mobile-menu" aria-label="Menu Navigasi HP" hidden>
+        <ul class="mobile-menu-list">
+          <li><a href="#lokasi-pemesanan" class="mobile-menu-link">1. Lokasi Pemesanan</a></li>
+          <li><a href="#detail-pemesanan" class="mobile-menu-link">2. Detail Pemesanan Anda</a></li>
+          <li><a href="#ringkasan-pilihan" class="mobile-menu-link">3. Ringkasan &amp; Kirim WhatsApp</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- KONTEN UTAMA FORMULIR PEMESANAN -->
+    <main class="page-main">
+      <form id="bookingForm" class="booking-form" novalidate>
+        <!-- FITUR 1: LOKASI PEMESANAN -->
+        <section id="lokasi-pemesanan" class="form-card" aria-labelledby="heading-lokasi">
+          <div class="card-header">
+            <div class="card-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21" />
+                <line x1="9" y1="3" x2="9" y2="18" />
+                <line x1="15" y1="6" x2="15" y2="21" />
+              </svg>
+            </div>
+            <div class="card-title-group">
+              <h1 id="heading-lokasi" class="card-title">LOKASI PEMESANAN</h1>
+              <p class="card-subtitle">
+                Informasi kontak pemesan dan alamat tempat dekorasi akan dipasang.
+              </p>
+            </div>
+          </div>
+
+          <div class="fields-grid">
+            <!-- 1. Nama Lengkap Pelanggan -->
+            <div class="field-group is-full">
+              <label for="namaPelanggan" class="field-label">
+                Nama Lengkap Pelanggan <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <div class="input-wrapper">
+                <span class="input-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                  </svg>
+                </span>
+                <input
+                  type="text"
+                  id="namaPelanggan"
+                  name="namaPelanggan"
+                  class="form-control"
+                  placeholder="Masukkan nama lengkap Anda"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+              <p class="field-error-text" role="alert"></p>
+            </div>
+
+            <!-- 2. Nomor WhatsApp -->
+            <div class="field-group is-full">
+              <label for="nomorWhatsapp" class="field-label">
+                Nomor WhatsApp <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <div class="input-wrapper">
+                <span class="input-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                </span>
+                <input
+                  type="tel"
+                  id="nomorWhatsapp"
+                  name="nomorWhatsapp"
+                  class="form-control"
+                  placeholder="Contoh: 081234567890"
+                  autocomplete="tel"
+                  required
+                />
+              </div>
+              <p class="field-error-text" role="alert"></p>
+            </div>
+
+            <!-- 3. Provinsi -->
+            <div class="field-group">
+              <label for="provinsi" class="field-label">
+                Provinsi <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <div class="input-wrapper">
+                <span class="input-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="2" y1="12" x2="22" y2="12" />
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                  </svg>
+                </span>
+                <input
+                  type="text"
+                  id="provinsi"
+                  name="provinsi"
+                  class="form-control"
+                  placeholder="Contoh: Nusa Tenggara Timur"
+                  required
+                />
+              </div>
+              <p class="field-error-text" role="alert"></p>
+            </div>
+
+            <!-- 4. Kabupaten/Kota -->
+            <div class="field-group">
+              <label for="kabupatenKota" class="field-label">
+                Kabupaten/Kota <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <div class="input-wrapper">
+                <span class="input-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="4" y="2" width="16" height="20" rx="2" ry="2" />
+                    <path d="M9 22v-4h6v4" />
+                    <path d="M8 6h.01" />
+                    <path d="M16 6h.01" />
+                    <path d="M12 6h.01" />
+                    <path d="M12 10h.01" />
+                    <path d="M12 14h.01" />
+                    <path d="M16 10h.01" />
+                    <path d="M16 14h.01" />
+                    <path d="M8 10h.01" />
+                    <path d="M8 14h.01" />
+                  </svg>
+                </span>
+                <input
+                  type="text"
+                  id="kabupatenKota"
+                  name="kabupatenKota"
+                  class="form-control"
+                  placeholder="Contoh: Kabupaten Sikka"
+                  required
+                />
+              </div>
+              <p class="field-error-text" role="alert"></p>
+            </div>
+
+            <!-- 5. Kecamatan -->
+            <div class="field-group">
+              <label for="kecamatan" class="field-label">
+                Kecamatan <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <div class="input-wrapper">
+                <span class="input-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 21h18" />
+                    <path d="M5 21V7l8-4v18" />
+                    <path d="M19 21V11l-6-4" />
+                    <path d="M9 9v.01" />
+                    <path d="M9 12v.01" />
+                    <path d="M9 15v.01" />
+                    <path d="M9 18v.01" />
+                  </svg>
+                </span>
+                <input
+                  type="text"
+                  id="kecamatan"
+                  name="kecamatan"
+                  class="form-control"
+                  placeholder="Contoh: Alok"
+                  required
+                />
+              </div>
+              <p class="field-error-text" role="alert"></p>
+            </div>
+
+            <!-- 6. Desa/Kelurahan -->
+            <div class="field-group">
+              <label for="desaKelurahan" class="field-label">
+                Desa/Kelurahan <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <div class="input-wrapper">
+                <span class="input-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22v-7" />
+                    <path d="M12 10V3" />
+                    <path d="M4 6h14l2 2-2 2H4z" />
+                    <path d="M20 13H6l-2 2 2 2h14z" />
+                  </svg>
+                </span>
+                <input
+                  type="text"
+                  id="desaKelurahan"
+                  name="desaKelurahan"
+                  class="form-control"
+                  placeholder="Contoh: Kota Uneng"
+                  required
+                />
+              </div>
+              <p class="field-error-text" role="alert"></p>
+            </div>
+
+            <!-- 7. Alamat Lengkap Lokasi Acara -->
+            <div class="field-group is-full">
+              <label for="alamatLengkap" class="field-label">
+                Alamat Lengkap Lokasi Acara <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <div class="input-wrapper is-textarea">
+                <span class="input-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </span>
+                <textarea
+                  id="alamatLengkap"
+                  name="alamatLengkap"
+                  class="form-control"
+                  rows="3"
+                  placeholder="Nama gedung, jalan, nomor rumah, dan patokan lokasi acara"
+                  required
+                ></textarea>
+              </div>
+              <p class="field-hint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="12" y1="16" x2="12" y2="12" />
+                  <line x1="12" y1="8" x2="12.01" y2="8" />
+                </svg>
+                <span>Fokus pada alamat lokasi pemasangan dekorasi acara.</span>
+              </p>
+              <p class="field-error-text" role="alert"></p>
+            </div>
+          </div>
+        </section>
+
+        <!-- FITUR 2: DETAIL PEMESANAN ANDA + FITUR 3: RINGKASAN PILIHAN -->
+        <section id="detail-pemesanan" class="form-card" aria-labelledby="heading-detail">
+          <div class="card-header">
+            <div class="card-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+                <path d="m9 16 2 2 4-4" />
+              </svg>
+            </div>
+            <div class="card-title-group">
+              <h2 id="heading-detail" class="card-title">DETAIL PEMESANAN ANDA</h2>
+              <p class="card-subtitle">
+                Pilihan paket dekorasi, waktu pelaksanaan, dan catatan acara.
+              </p>
+            </div>
+          </div>
+
+          <div class="fields-grid">
+            <!-- A. Jenis Dekorasi -->
+            <div class="field-group is-full">
+              <label for="jenisDekorasi" class="field-label">
+                Jenis Dekorasi <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <div class="input-wrapper">
+                <span class="input-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3l4 7H8l4-7z" />
+                    <circle cx="8" cy="16.5" r="3" />
+                    <rect x="13.5" y="13.5" width="6" height="6" rx="1" />
+                  </svg>
+                </span>
+                <select id="jenisDekorasi" name="jenisDekorasi" class="form-control is-placeholder" required>
+                  <option value="">-- Pilih Jenis Dekorasi --</option>
+                  <option value="Dekorasi Pernikahan">Dekorasi Pernikahan</option>
+                  <option value="Dekorasi Wisuda">Dekorasi Wisuda</option>
+                  <option value="Dekorasi Ulang Tahun">Dekorasi Ulang Tahun</option>
+                  <option value="Dekorasi Tunangan">Dekorasi Tunangan</option>
+                  <option value="Dekorasi Acara Lainnya">Dekorasi Acara Lainnya</option>
+                </select>
+                <span class="select-chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </span>
+              </div>
+              <p class="field-error-text" role="alert"></p>
+            </div>
+
+            <!-- B. Paket Dekorasi -->
+            <div class="field-group is-full">
+              <label for="paketDekorasi" class="field-label">
+                Paket Dekorasi <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <div class="input-wrapper">
+                <span class="input-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+                    <path d="m3.3 7 8.7 5 8.7-5" />
+                    <path d="M12 22V12" />
+                  </svg>
+                </span>
+                <select id="paketDekorasi" name="paketDekorasi" class="form-control is-placeholder" required>
+                  <option value="">-- Pilih Paket --</option>
+                  <option value="basic">Paket Basic – Rp1.500.000</option>
+                  <option value="standard">Paket Standard – Rp2.500.000</option>
+                  <option value="premium">Paket Premium – Rp4.000.000</option>
+                </select>
+                <span class="select-chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </span>
+              </div>
+              <p class="field-error-text" role="alert"></p>
+            </div>
+
+            <!-- C. Harga Paket (Otomatis) -->
+            <div class="field-group is-full">
+              <label for="hargaPaket" class="field-label">Harga Paket (Otomatis)</label>
+              <div class="input-wrapper">
+                <span class="input-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
+                    <line x1="7" y1="7" x2="7.01" y2="7" />
+                  </svg>
+                </span>
+                <input
+                  type="text"
+                  id="hargaPaket"
+                  name="hargaPaket"
+                  class="form-control is-price-readonly"
+                  value="Rp0"
+                  readonly
+                  aria-readonly="true"
+                />
+              </div>
+            </div>
+
+            <!-- D. Tanggal Acara -->
+            <div class="field-group">
+              <label for="tanggalAcara" class="field-label">
+                Tanggal Acara <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <div class="input-wrapper">
+                <span class="input-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                    <line x1="16" y1="2" x2="16" y2="6" />
+                    <line x1="8" y1="2" x2="8" y2="6" />
+                    <line x1="3" y1="10" x2="21" y2="10" />
+                  </svg>
+                </span>
+                <input
+                  type="date"
+                  id="tanggalAcara"
+                  name="tanggalAcara"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <p class="field-error-text" role="alert"></p>
+            </div>
+
+            <!-- E. Waktu Acara -->
+            <div class="field-group">
+              <label for="waktuAcara" class="field-label">
+                Waktu Acara <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <div class="input-wrapper">
+                <span class="input-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                </span>
+                <input
+                  type="text"
+                  id="waktuAcara"
+                  name="waktuAcara"
+                  class="form-control"
+                  placeholder="Contoh: 09:00 WIB / Siang"
+                  required
+                />
+              </div>
+              <p class="field-error-text" role="alert"></p>
+            </div>
+
+            <!-- F. Catatan Tambahan (Opsional) -->
+            <div class="field-group is-full">
+              <label for="catatanTambahan" class="field-label">
+                Catatan Tambahan <span class="optional-mark">(Opsional)</span>
+              </label>
+              <div class="input-wrapper is-textarea">
+                <span class="input-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                  </svg>
+                </span>
+                <textarea
+                  id="catatanTambahan"
+                  name="catatanTambahan"
+                  class="form-control"
+                  rows="3"
+                  placeholder="Tuliskan nama banner acara, request warna khusus, tema balap/karakter, atau permintaan lainnya..."
+                ></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- FITUR 3: RINGKASAN PILIHAN -->
+          <div id="ringkasan-pilihan" class="summary-card" aria-labelledby="heading-ringkasan" aria-live="polite">
+            <div class="summary-header">
+              <span class="summary-header-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                  <polyline points="14 2 14 8 20 8" />
+                  <line x1="8" y1="13" x2="16" y2="13" />
+                  <line x1="8" y1="17" x2="13" y2="17" />
+                </svg>
+              </span>
+              <h3 id="heading-ringkasan" class="summary-title">RINGKASAN PILIHAN</h3>
+            </div>
+
+            <div class="summary-rows">
+              <div class="summary-row">
+                <span class="summary-label">Dekorasi:</span>
+                <span id="summaryDekorasi" class="summary-value is-empty">Belum dipilih</span>
+              </div>
+              <div class="summary-row">
+                <span class="summary-label">Paket:</span>
+                <span id="summaryPaket" class="summary-value is-empty">Belum dipilih</span>
+              </div>
+            </div>
+
+            <div class="summary-divider" aria-hidden="true"></div>
+
+            <div class="summary-total-row">
+              <span class="summary-total-label">Total Harga:</span>
+              <span id="summaryHarga" class="summary-total-value">Rp0</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- KETERANGAN KEAMANAN & TOMBOL WHATSAPP -->
+        <div class="checkout-actions">
+          <div class="safety-notice">
+            <p>
+              Tidak ada pembayaran di website ini. Pembayaran dan konfirmasi jadwal langsung
+              didiskusikan dengan aman melalui WhatsApp Admin.
+            </p>
+          </div>
+
+          <div id="formAlert" class="form-alert" role="alert" hidden>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="12" y1="8" x2="12" y2="12" />
+              <line x1="12" y1="16" x2="12.01" y2="16" />
+            </svg>
+            <span id="formAlertText">Mohon lengkapi seluruh kolom wajib sebelum mengirim pesanan.</span>
+          </div>
+
+          <div id="waReadyBox" class="wa-ready-box" role="status" hidden>
+            <p class="wa-ready-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              Ringkasan pesanan siap dikirim ke WhatsApp Admin DEKOR BALAP.
+            </p>
+            <p class="wa-ready-desc">
+              Jika aplikasi WhatsApp tidak terbuka otomatis, tekan tautan di bawah ini:
+            </p>
+            <a
+              id="waFallbackLink"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="wa-fallback-link"
+            >
+              Buka Chat WhatsApp Admin
+            </a>
+          </div>
+
+          <button type="submit" id="submitWaBtn" class="wa-submit-btn">
+            <svg class="wa-btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12.031 2c-5.516 0-9.969 4.453-9.969 9.969 0 1.766.469 3.484 1.344 5l-1.406 5.156 5.281-1.391c1.469.797 3.109 1.219 4.75 1.219 5.516 0 9.969-4.453 9.969-9.969S17.547 2 12.031 2zm5.813 14.125c-.25.703-1.438 1.344-2 1.422-.531.078-1.203.109-1.938-.125-.453-.141-1.031-.328-1.766-.641-3.078-1.328-5.094-4.438-5.25-4.641-.156-.203-1.25-1.656-1.25-3.156s.781-2.25 1.063-2.563c.281-.313.609-.391.813-.391.203 0 .406 0 .578.016.188.016.438-.078.688.516.25.609.859 2.094.938 2.25.078.156.125.344.016.547-.109.203-.156.344-.313.516-.156.172-.328.391-.469.516-.156.156-.328.328-.141.641.188.313.844 1.391 1.813 2.25 1.25 1.109 2.297 1.453 2.609 1.609.313.156.5.125.688-.078.188-.203.797-.938 1.016-1.25.219-.313.422-.266.719-.156.297.109 1.891.891 2.219 1.047.328.156.547.234.625.375.078.141.078.813-.172 1.516z" />
+            </svg>
+            <span class="wa-btn-copy">
+              <span class="wa-btn-title">KIRIM PESANAN VIA WHATSAPP</span>
+              <span class="wa-btn-subtitle">DATA AKAN OTOMATIS DIRANGKUM DAN DITERUSKAN KE CHAT ADMIN</span>
+            </span>
+          </button>
+        </div>
+      </form>
+    </main>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>

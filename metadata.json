@@ -1,0 +1,6 @@
+{
+  "name": "DEKOR BALAP - Formulir Pemesanan",
+  "description": "Formulir pemesanan jasa dekorasi DEKOR BALAP. Pilih jenis dekorasi, paket, jadwal, dan lokasi pemasangan lalu kirim pesanan langsung ke WhatsApp Admin.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
