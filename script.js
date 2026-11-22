@@ -6,7 +6,7 @@
 
 // Nomor WhatsApp Admin sementara (format internasional tanpa +, spasi, atau 0 di depan).
 // Ganti dengan nomor WhatsApp Admin DEKOR BALAP yang aktif.
-export const ADMIN_WHATSAPP_NUMBER = '6281234567890';
+export const ADMIN_WHATSAPP_NUMBER = '6282145362068';
 
 export const DECORATION_TYPES = [
   'Dekorasi Pernikahan',

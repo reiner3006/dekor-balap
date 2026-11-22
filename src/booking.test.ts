@@ -68,7 +68,7 @@ test('validateBookingForm catches missing required fields and short phone number
 test('buildWhatsAppMessage and buildWhatsAppUrl format complete WhatsApp message and encodeURIComponent URL', () => {
   const msg = buildWhatsAppMessage(validSampleData);
   assert.match(msg, /Halo DEKOR BALAP, saya ingin melakukan pemesanan jasa dekorasi\./);
-  assert.match(msg, /\*DATA PELANGGAN\*\nNama: Budi Santoso\nNomor WhatsApp: 081234567890/);
+  assert.match(msg, /\*DATA PELANGGAN\*\nNama: Budi Santoso\nNomor WhatsApp: 082145362068/);
   assert.match(msg, /\*DETAIL DEKORASI\*\nJenis Dekorasi: Dekorasi Pernikahan\nPaket: Paket Standard\nHarga: Rp2\.500\.000/);
   assert.match(msg, /\*JADWAL ACARA\*\nTanggal: 20 Desember 2026\nWaktu: 09:00 WIB \/ Pagi/);
   assert.match(msg, /\*LOKASI PEMASANGAN\*\nProvinsi: Nusa Tenggara Timur\nKabupaten\/Kota: Kabupaten Sikka\nKecamatan: Alok\nDesa\/Kelurahan: Kota Uneng\nAlamat Lengkap: Jl\. Soekarno Hatta No\. 12, dekat Aula Paroki/);
